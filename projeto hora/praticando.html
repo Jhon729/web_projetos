@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE</title>
+</head>
+<body>
+    <h1>olá</h1>
+    <p>qual o seu nome?</p>
+    <input type="text" name="tx" id="tx" placeholder="search">
+    <input type="button" value="clicar" onclick="clicar()">
+    <div id='nome' > </div>
+    
+</body>
+<script>
+    function clicar() {
+    let nome = document.querySelector('input#tx')
+    let res = document.querySelector('div#nome')
+    let res1 = String(nome.value)
+    let agora = new Date()
+    let hora = agora.getHours()
+    let agora2 = Number(hora.value)
+    
+  
+    
+if ( hora >= 18 && hora <=23 ) {
+        let nome = document.querySelector('input#tx')
+    let res = document.querySelector('div#nome')
+    let res1 = String(nome.value)
+    
+    let agora2 = Number(hora.value)
+
+res.innerHTML = `ola ${res1} agora sao ${hora} horas, boa noite! `
+
+    } else if (hora <= 13 && hora >= 0 ) {
+        let nome = document.querySelector('input#tx')
+    let res = document.querySelector('div#nome')
+    let res1 = String(nome.value)
+    
+    
+    let agora2 = Number(hora.value)
+    res.innerHTML = `ola ${res1} agora sao ${hora} horas, bom dia!`
+
+    } else    {
+        let nome = document.querySelector('input#tx')
+    let res = document.querySelector('div#nome')
+    let res1 = String(nome.value)
+   
+  
+    let agora2 = Number(hora.value)
+    
+
+res.innerHTML = `ola ${res1} agora sao ${hora} horas, boa tarde! `
+} 
+    
+    
+} 
+</script>
+</html>
